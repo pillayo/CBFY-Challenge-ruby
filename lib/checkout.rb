@@ -1,8 +1,8 @@
 class Checkout
+  
+  attr_reader :cart
 
-	attr_reader :cart
-
-	def initialize(currency = "€", rules = nil)
+  def initialize(currency = "€", rules = nil)
     @cart = []
     @currency = currency
     @rules = rules
