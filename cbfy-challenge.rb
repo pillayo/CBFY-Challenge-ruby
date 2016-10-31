@@ -1,7 +1,9 @@
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 
+#Init the catalog of products, Catalog this is a singleton
 Catalog.init_catalog
 
+#Link Product with discount type
 rule1 = PricingRule.new(Catalog.find("TSHIRT"), PricingRulesRepository.rule_discount_one_more_two)
 rule2 = PricingRule.new(Catalog.find("VOUCHER"), PricingRulesRepository.rule_two_free_one)
 
